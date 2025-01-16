@@ -1,3 +1,4 @@
+import Hero from "./Components/Hero/Hero";
 import Navbar from "./Components/Navbar";
 import { UpdateFollower } from "react-mouse-follower";
 
@@ -13,6 +14,7 @@ function App() {
           }}
         >
           <Navbar />
+          <Hero />
         </UpdateFollower>
       </main>
     </>
