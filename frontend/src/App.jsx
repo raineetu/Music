@@ -2,6 +2,8 @@ import Hero from "./Components/Hero/Hero";
 import Navbar from "./Components/Navbar";
 import { UpdateFollower } from "react-mouse-follower";
 import Service from "./Components/Service";
+import Banner from "./Components/Banner";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Hero />
         </UpdateFollower>
         <Service />
+        <Banner />
+        <Footer />
       </main>
     </>
   );

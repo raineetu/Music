@@ -115,27 +115,33 @@ function Hero() {
                 </motion.div>
 
                 {/* Image Section for Button with UpdateFollower */}
-                <UpdateFollower
-                  mouseOptions={{
-                    backgroundColor: activeData.bgColor,
-                    zIndex: 99,
-                    followSpeed: 0.5,
-                    rotate: -720,
-                    scale: 6,
-                    backgroundElement: (
-                      <div>
-                        <img src={activeData.image} />
-                      </div>
-                    ),
-                  }}
+
+                {/* Button with UpdateFollower */}
+                <motion.button
+                  className="py-2 mt-4 px-4 rounded-[4px] shadow-sm shadow-white"
+                  style={{ backgroundColor: activeData.bgColor }}
+                  variants={fadeup(0.6)}
+                  initial="hidden"
+                  animate="show"
+                  exit="exit"
                 >
-                  <button
-                    className="py-2 mt-4 px-4 rounded-[4px] shadow-sm shadow-white"
-                    style={{ backgroundColor: activeData.bgColor }}
+                  <UpdateFollower
+                    mouseOptions={{
+                      backgroundColor: "whitesmoke",
+                      zIndex: 99,
+                      followSpeed: 0.5,
+                      rotate: -720,
+                      scale: 6,
+                      backgroundElement: (
+                        <div>
+                          <img src={activeData.image} alt={activeData.title} />
+                        </div>
+                      ),
+                    }}
                   >
                     Buy and listen
-                  </button>
-                </UpdateFollower>
+                  </UpdateFollower>
+                </motion.button>
               </AnimatePresence>
 
               {/* Image Section for Small Devices */}
